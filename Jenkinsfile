@@ -12,7 +12,7 @@ python3 AMICreatePython.py ${AMI_ID}'''
           echo "Entered AMI_ID: ${AMI_ID}"
         }
 
-        catchError(buildResult: 'FAILURE', message: 'The AMI ID given does not match any preset images', stageResult: 'FAILURE', catchInterruptions: true) {
+        catchError(buildResult: 'FAILED', message: 'The AMI ID given does not match any preset images', stageResult: 'FAILED', catchInterruptions: true) {
           echo 'Try running the pipeline with parameters and entering an AMI ID'
         }
 
