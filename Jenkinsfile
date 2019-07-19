@@ -1,9 +1,11 @@
 pipeline {
   agent any
   stages {
-    stage('error') {
+    stage('PythonAMIParser') {
       steps {
         sh '''sudo cd ~/../../../home/tduser
+python3 jenkinsPython/AMICreatePython.py
+
 '''
       }
     }
