@@ -8,7 +8,7 @@ cd home/
 cd jenkinsPythonScript'''
         script {
           echo "Entered AMI_ID: ${AMI_ID}"
-          python3 "AMICreatePython.py ${AMI_ID}"
+          python "AMICreatePython.py ${AMI_ID}"
         }
 
       }
