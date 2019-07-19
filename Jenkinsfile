@@ -5,12 +5,8 @@ pipeline {
       steps {
         sh '''cd ~/../../../
 pwd
-cd home/tduser/
-pwd
+cd home/
 ls
-cd jenkinsPython
-python3 AMICreatePython.py
-
 '''
       }
     }
