@@ -3,7 +3,15 @@ pipeline {
   stages {
     stage('error') {
       steps {
-        sh '''cd ~/jenkinsPython/
+        sh '''cd ..
+cd ..
+cd ..
+cd ..
+cd ..
+cd ..
+cd ..
+cd ..
+
 pwd
 '''
       }
