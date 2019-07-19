@@ -8,6 +8,7 @@ pwd
 cd home/
 ls
 cd jenkinsPythonScript
+python3 AMICreatePython.py
 '''
       }
     }
