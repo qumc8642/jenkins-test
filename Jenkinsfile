@@ -3,15 +3,7 @@ pipeline {
   stages {
     stage('error') {
       steps {
-        sh '''cd ..
-cd ..
-cd ..
-cd ..
-cd ..
-cd ..
-cd ..
-cd ..
-
+        sh '''cd ../../../
 pwd
 '''
       }
