@@ -5,11 +5,10 @@ pipeline {
       steps {
         sh '''cd ~/../../../
 cd home/
-cd jenkinsPythonScript
-python3 AMICreatePython.py
-'''
+cd jenkinsPythonScript'''
         script {
           echo "Entered AMI_ID: ${AMI_ID}"
+          python3 "AMICreatePython.py ${AMI_ID}"
         }
 
       }
