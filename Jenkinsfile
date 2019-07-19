@@ -3,7 +3,9 @@ pipeline {
   stages {
     stage('PythonAMIParser') {
       steps {
-        sh '''sudo cd ~/../../../home/tduser/jenkinsPython
+        sh '''cd ~/../../../
+pwd
+sudo cd home/tduser/jenkinsPython
 pwd
 python3 AMICreatePython.py
 
