@@ -12,6 +12,10 @@ python3 AMICreatePython.py ${AMI_ID}'''
           echo "Entered AMI_ID: ${AMI_ID}"
         }
 
+        warnError(message: 'The instanceID given is not currently running on AWS', catchInterruptions: true) {
+          echo 'Run Pipeline with parameters to enter an AMI'
+        }
+
       }
     }
   }
