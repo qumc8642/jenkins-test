@@ -12,7 +12,7 @@ python3 AMICreatePython.py ${AMI_ID}'''
           echo "Entered AMI_ID: ${AMI_ID}"
         }
 
-        catchError(buildResult: 'AMI ID NULL', message: 'The instanceID given is not currently running on AWS', stageResult: 'Fail') {
+        catchError(buildResult: 'FAILURE', message: 'The AMI ID given does not match any preset images', stageResult: 'FAILURE', catchInterruptions: true) {
           echo 'Try running the pipeline with parameters and entering an AMI ID'
         }
 
