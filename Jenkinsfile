@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('error') {
       steps {
-        sh '''sudo python3 ../../../../../home/tduser/jenkinsPython/AMICreatePython.py
+        sh '''cd ../../../../../home/tduser/jenkinsPython/
+pwd
 '''
       }
     }
