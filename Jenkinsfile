@@ -3,8 +3,8 @@ pipeline {
   stages {
     stage('error') {
       steps {
-        sh '''pwd
-'''
+        sh '''cd ~
+pwd'''
       }
     }
   }
