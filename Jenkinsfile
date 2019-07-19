@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('error') {
       steps {
-        sh '''cd ~
+        sh '''sudo cd ~/../../../home/tduser
 pwd'''
       }
     }
