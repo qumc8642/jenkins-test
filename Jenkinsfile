@@ -4,7 +4,11 @@ pipeline {
     stage('error') {
       steps {
         sh '''ls
-
+cd ..
+cd ..
+cd ..
+cd ..
+ls
 '''
       }
     }
