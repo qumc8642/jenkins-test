@@ -9,7 +9,7 @@ cd jenkinsPythonScript
 python3 AMICreatePython.py
 '''
         script {
-          echo ${AMI_ID}
+          echo "Entered AMI_ID: ${AMI_ID}"
         }
 
       }
