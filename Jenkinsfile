@@ -5,8 +5,11 @@ pipeline {
       steps {
         sh '''ls
 cd ..
+ls
 cd ..
+ls
 cd ..
+ls
 cd ..
 ls
 '''
