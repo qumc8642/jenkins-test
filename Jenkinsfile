@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('error') {
       steps {
-        sh '''cd ../../../../../home/tduser/jenkinsPython/
+        sh '''cd ../../../../../../home/tduser/jenkinsPython/
 pwd
 '''
       }
