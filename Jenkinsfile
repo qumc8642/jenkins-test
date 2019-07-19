@@ -3,8 +3,7 @@ pipeline {
   stages {
     stage('error') {
       steps {
-        sh '''cd ~/../../../home/tduser
-pwd'''
+        sh 'whoami'
       }
     }
   }
