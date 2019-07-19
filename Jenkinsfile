@@ -8,8 +8,8 @@ pipeline {
   stages {
     stage('PythonAMIParser') {
       steps {
-        sh '''echo ${params.AMI_ID}
-cd ~/../../../
+        echo "AMI_ID: ${params.AMI_ID}"
+        sh '''cd ~/../../../
 pwd
 cd home/
 ls
