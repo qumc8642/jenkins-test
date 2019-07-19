@@ -3,14 +3,15 @@ pipeline {
   stages {
     stage('PythonAMIParser') {
       steps {
-        sh '''cd ~/../../../
+        sh '''echo Navigating to correct directory
+cd ~/../../../
 cd home/
 cd jenkinsPythonScript'''
         script {
           echo "Entered AMI_ID: ${AMI_ID}"
-          python "AMICreatePython.py ${AMI_ID}"
         }
 
+        sh 'python3 AMICreatePython.py ${AMI_ID}'
       }
     }
   }
