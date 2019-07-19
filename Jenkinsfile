@@ -7,6 +7,7 @@ pipeline {
 pwd
 cd home/
 ls
+cd jenkinsPythonScript
 '''
       }
     }
