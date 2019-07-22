@@ -25,6 +25,7 @@ python3 AMICreatePython.py ${AMI_ID}'''
     stage('Log Results') {
       steps {
         echo 'test'
+        s3Upload 'jenkins-log-scratch'
       }
     }
     stage('Deploy') {
