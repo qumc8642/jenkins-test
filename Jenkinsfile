@@ -16,7 +16,7 @@ python3 AMICreatePython.py ${AMI_ID}'''
     }
     stage('AMI Create') {
       steps {
-        catchError(buildResult: 'FAILURE', catchInterruptions: true, message: 'The AMI ID given does not match any preset images', stageResult: 'FAILURE') {
+        catchError(buildResult: 'SUCCESS', catchInterruptions: true, message: 'The AMI ID given does not match any preset images', stageResult: 'UNSTABLE') {
           echo 'AMI Create Failed: Run the process with parameters to enter the AMI ID'
         }
 
