@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('PythonAMIParser') {
+    stage('Create AMI') {
       steps {
         sh '''echo Navigating to correct directory
 cd ~/../../../
@@ -14,7 +14,7 @@ python3 AMICreatePython.py ${AMI_ID}'''
 
       }
     }
-    stage('AMI Create') {
+    stage('Test AMI') {
       steps {
         catchError(buildResult: 'SUCCESS', catchInterruptions: true, message: 'The AMI ID given does not match any preset images', stageResult: 'UNSTABLE') {
           echo 'AMI Create Failed: Run the process with parameters to enter the AMI ID'
@@ -22,9 +22,14 @@ python3 AMICreatePython.py ${AMI_ID}'''
 
       }
     }
-    stage('test') {
+    stage('Log Results') {
       steps {
         echo 'test'
+      }
+    }
+    stage('Deploy') {
+      steps {
+        catchError()
       }
     }
   }
