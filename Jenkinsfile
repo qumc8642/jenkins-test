@@ -22,6 +22,11 @@ python3 AMICreatePython.py ${AMI_ID}'''
 
       }
     }
+    stage('test') {
+      steps {
+        echo 'test'
+      }
+    }
   }
   parameters {
     string(name: 'AMI_ID', defaultValue: 'None', description: 'Enter an AMI_ID to boot up and test')
