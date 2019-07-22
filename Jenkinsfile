@@ -7,9 +7,9 @@ pipeline {
 cd ~/../../../
 cd home/
 cd jenkinsPythonScript
-python3 AMICreatePython.py ${AMI_ID}'''
+python3 AMICreatePython.py ${AMIId}'''
         script {
-          echo "Entered AMI_ID: ${AMI_ID}"
+          echo "Entered AMI_ID: ${AMIId}"
         }
 
       }
@@ -35,6 +35,7 @@ python3 AMICreatePython.py ${AMI_ID}'''
     }
   }
   parameters {
-    string(name: 'AMI_ID', defaultValue: 'None', description: 'Enter an AMI_ID to boot up and test')
+    string(name: 'AMIId', defaultValue: 'None', description: 'Enter an AMI ID to boot up and test')
+    string(name: 'InstanceType', defaultValue: 't2.micro', description: 'Enter an instance type ex: t2.micro, t2.small, etc..')
   }
 }
