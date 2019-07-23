@@ -7,7 +7,7 @@ pipeline {
 cd ~/../../../
 cd home/
 cd jenkins
-ssh -i jenkins_ssh tduser@54.172.42.112
+ssh -i jenkins_ssh tduser@54.172.42.112 -m echo hello
 
 '''
       }
