@@ -3,11 +3,17 @@ pipeline {
   stages {
     stage('Create AMI') {
       steps {
-        sh '''echo Navigating to correct directory
+        sh '''#!/bin/bash
+
+echo Navigating to correct directory
 cd ~/../../../
 cd home/
 cd jenkins
-ssh -i jenkins_ssh -T tduser@54.172.42.112 \'echo hello\'
+ssh -i jenkins_ssh -tt tduser@54.172.42.112 \'
+
+echo success
+
+\'
 
 '''
       }
