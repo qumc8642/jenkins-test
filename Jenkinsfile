@@ -9,7 +9,7 @@ echo Navigating to correct directory
 cd ~/../../../
 cd home/
 cd jenkins
-ssh -i jenkins_ssh -tt tduser@54.172.42.112 \'
+ssh -tt tduser@54.172.42.112 \'
 
 echo success
 
